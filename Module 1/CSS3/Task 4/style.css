@@ -1,0 +1,27 @@
+/* Body background with fallback color */
+body {
+    background-color: #e6f2ff;
+    background-image: url("https://via.placeholder.com/1200x800");
+    background-size: cover;
+    font-family: Arial;
+}
+
+/* Section style */
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 50px;
+    padding: 30px;
+}
+
+/* Gradient header */
+h1 {
+    background: linear-gradient(to right, #0044cc, #00ccff);
+    color: white;
+    padding: 15px;
+}
+
+/* Text color using HEX */
+p {
+    color: #333333;
+    font-size: 18px;
+}

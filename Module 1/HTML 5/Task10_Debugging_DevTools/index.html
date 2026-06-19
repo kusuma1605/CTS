@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightyellow;
+        }
+
+        .box {
+            width: 300px;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Debugging with Chrome DevTools</h1>
+
+    <div class="box">
+        Inspect this element and change styles using DevTools.
+    </div>
+
+    <br>
+
+    <button onclick="calculateTotal()">Run Script</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateTotal() {
+            var price = 100;
+            var quantity = 3;
+
+            console.log("Price is:", price);
+            console.log("Quantity is:", quantity);
+
+            var total = price * quantity;
+
+            debugger;
+
+            document.getElementById("result").innerHTML =
+                "Total amount is ₹" + total;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 350px;
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 align="center">Event Registration Form</h1>
+
+    <form onsubmit="showMessage(event)">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required autofocus>
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>Date:</label>
+        <input type="date" required>
+
+        <label>Event Type:</label>
+        <select id="eventType" required>
+            <option value="">Select Event</option>
+            <option value="Music">Music</option>
+            <option value="Sports">Sports</option>
+            <option value="Art">Art</option>
+        </select>
+
+        <label>Message:</label>
+        <textarea placeholder="Enter your message"></textarea>
+
+        <button type="submit">Register</button>
+
+        <br><br>
+        <output id="result"></output>
+    </form>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var eventType = document.getElementById("eventType").value;
+
+            document.getElementById("result").innerHTML =
+                "Thank you " + name + "! You registered for " + eventType + ".";
+        }
+    </script>
+
+</body>
+</html>

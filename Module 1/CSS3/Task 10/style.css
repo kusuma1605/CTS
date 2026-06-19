@@ -1,0 +1,53 @@
+/* Navigation */
+nav {
+    display: flex;
+    background-color: #333333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Flexible image */
+img {
+    width: 50%;
+    height: auto;
+}
+
+/* Flexbox layout */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.container div {
+    background-color: lightblue;
+    padding: 20px;
+    width: 30%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container div {
+        width: 90%;
+    }
+}

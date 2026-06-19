@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Invite</title>
+</head>
+<body>
+
+    <h1>Community Event Promo Video</h1>
+
+    <video width="500" controls oncanplay="videoReady()">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <p id="message"></p>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+    </form>
+
+    <script>
+        function videoReady() {
+            document.getElementById("message").innerHTML = "Video ready to play";
+        }
+
+        window.onbeforeunload = function() {
+            return "Form is unfinished. Are you sure you want to leave?";
+        };
+    </script>
+
+</body>
+</html>
