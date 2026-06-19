@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Feedback</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        input, select, textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 300px;
+        }
+
+        img {
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Feedback</h1>
+
+    <label>Phone Number:</label>
+    <input type="text" id="phone" placeholder="Enter phone number" onblur="validatePhone()">
+    <p id="phoneMsg"></p>
+
+    <label>Select Event:</label>
+    <select id="event" onchange="showFee()">
+        <option value="">Select</option>
+        <option value="Music">Music</option>
+        <option value="Sports">Sports</option>
+        <option value="Art">Art</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <label>Feedback:</label>
+    <textarea id="feedback" onkeyup="countChars()" placeholder="Enter feedback"></textarea>
+
+    <p>Characters: <span id="count">0</span></p>
+
+    <button onclick="submitFeedback()">Submit</button>
+
+    <br><br>
+
+    <img src="https://via.placeholder.com/200" id="eventImg" ondblclick="enlargeImage()" alt="Event Image">
+
+    <script>
+        function validatePhone() {
+            var phone = document.getElementById("phone").value;
+
+            if (phone.length == 10 && !isNaN(phone)) {
+                document.getElementById("phoneMsg").innerHTML = "Valid phone number";
+                document.getElementById("phoneMsg").style.color = "green";
+            } else {
+                document.getElementById("phoneMsg").innerHTML = "Invalid phone number";
+                document.getElementById("phoneMsg").style.color = "red";
+            }
+        }
+
+        function showFee() {
+            var eventName = document.getElementById("event").value;
+
+            if (eventName == "Music") {
+                document.getElementById("fee").innerHTML = "Fee: ₹100";
+            } else if (eventName == "Sports") {
+                document.getElementById("fee").innerHTML = "Fee: ₹150";
+            } else if (eventName == "Art") {
+                document.getElementById("fee").innerHTML = "Fee: ₹80";
+            } else {
+                document.getElementById("fee").innerHTML = "";
+            }
+        }
+
+        function submitFeedback() {
+            alert("Feedback submitted successfully!");
+        }
+
+        function enlargeImage() {
+            document.getElementById("eventImg").style.width = "350px";
+        }
+
+        function countChars() {
+            var text = document.getElementById("feedback").value;
+            document.getElementById("count").innerHTML = text.length;
+        }
+    </script>
+
+</body>
+</html>

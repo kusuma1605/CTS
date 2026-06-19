@@ -1,0 +1,36 @@
+/* Navigation list */
+nav ul {
+    list-style-type: none;
+    list-style-position: inside;
+    background-color: #333333;
+    padding: 10px;
+}
+
+nav li {
+    display: inline;
+    margin: 15px;
+}
+
+/* Link states */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Methods</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background:skyblue;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="fadeout">Fade Out</button>
+<button id="fadein">Fade In</button>
+<button id="toggle">Toggle</button>
+<button id="chain">Chain</button>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#hide").click(function(){
+        $(".box").hide();
+    });
+
+    $("#show").click(function(){
+        $(".box").show();
+    });
+
+    $("#fadeout").click(function(){
+        $(".box").fadeOut();
+    });
+
+    $("#fadein").click(function(){
+        $(".box").fadeIn();
+    });
+
+    $("#toggle").click(function(){
+        $(".box").toggle();
+    });
+
+    $("#chain").click(function(){
+        $(".box").slideUp().delay(1000).slideDown();
+    });
+
+});
+
+</script>
+
+</body>
+</html>
